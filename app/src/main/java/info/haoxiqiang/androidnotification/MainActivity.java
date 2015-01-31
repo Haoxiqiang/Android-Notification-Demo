@@ -16,7 +16,7 @@ public class MainActivity extends ActionBarActivity {
     private RecyclerView mRecyclerView;
     private ListRecyclerAdapter mAdapter;
     private LinearLayoutManager mLayoutManager;
-    private static final String[] ITEMS = {"Simple Notification","WithBehaviour","WithParentBehaviour","NewTask","BigViews","BigPictureStyle","InboxStyle"};
+    private static final String[] ITEMS = {"Simple Notification","WithBehaviour","WithParentBehaviour","NewTask","BigViews","BigPictureStyle","InboxStyle","Determinate Progress","InDeterminate Progress"};
     private final ArrayList<String> dataSet = new ArrayList<String>();
 
     @Override
@@ -61,6 +61,12 @@ public class MainActivity extends ActionBarActivity {
                         break;
                     case 6:
                         SimpleNotification.showNotificationWithInboxStyle(v.getContext(),position);
+                        break;
+                    case 7:
+                        SimpleNotification.showNotificationWithDeterminate(v.getContext(),position);
+                        break;
+                    case 8:
+                        SimpleNotification.showNotificationWithIndeterminate(v.getContext(),position);
                         break;
                 }
             }
